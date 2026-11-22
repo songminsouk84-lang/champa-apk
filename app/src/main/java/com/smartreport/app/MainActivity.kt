@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
             contentBox.addView(iconView)
 
             val titleView = TextView(this@MainActivity).apply {
-                text = "ພ້ອມ Run ໃນແອັບ Android!"
+                text = "ນ້ອງຈໍາປາ ມາຮັບໃຊ້ແລ້ວ ຈ້າວ"
                 setTextColor(Color.WHITE)
                 textSize = 20f
                 setTypeface(null, Typeface.BOLD)
