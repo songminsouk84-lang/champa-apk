@@ -3,7 +3,7 @@
 
 ## ຂໍ້ມູນແອັບ
 - ຊື່ແອັບ: Champa
-- Package ID: com.smartreport.app
+- Package ID: com.champa.app
 - ເວີຊັ່ນ: 1.0.0
 - ແຫຼ່ງຂໍ້ມູນ: https://sites.google.com/view/bolchvoice/champa
 

@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    namespace 'com.smartreport.app'
+    namespace 'com.champa.app'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.smartreport.app"
+        applicationId "com.champa.app"
         minSdk 24
         targetSdk 34
-        versionCode 1
+        versionCode 179533933
         versionName "1.0.0"
     }
 

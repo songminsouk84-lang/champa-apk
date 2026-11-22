@@ -1,4 +1,4 @@
-package com.smartreport.app
+package com.champa.app
 
 import android.annotation.SuppressLint
 import android.app.DownloadManager
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         
         // Custom Splash / Welcome Overlay with user's Background Image & Custom Texts
         splashOverlay = FrameLayout(this).apply {
-            setBackgroundColor(Color.parseColor("#10b981"))
+            setBackgroundColor(Color.parseColor("#709bf0"))
             
             val bgView = ImageView(this@MainActivity).apply {
                 setImageResource(R.drawable.app_bg)
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
             // Semi-transparent scrim so text stays readable
             val scrimView = View(this@MainActivity).apply {
-                setBackgroundColor(Color.argb(99, 15, 23, 42))
+                setBackgroundColor(Color.argb(71, 15, 23, 42))
                 layoutParams = FrameLayout.LayoutParams(
                     FrameLayout.LayoutParams.MATCH_PARENT,
                     FrameLayout.LayoutParams.MATCH_PARENT
@@ -109,16 +109,19 @@ class MainActivity : AppCompatActivity() {
             }
             contentBox.addView(iconView)
 
-            val titleView = TextView(this@MainActivity).apply {
-                text = "ນ້ອງຈໍາປາ ມາຮັບໃຊ້ແລ້ວ ຈ້າວ"
-                setTextColor(Color.WHITE)
-                textSize = 20f
-                setTypeface(null, Typeface.BOLD)
-                gravity = Gravity.CENTER
+            val titleText = "ນ້ອງຈໍາປາ ພ້ອມຮັບໃຊ້ ແລ້ວຈ້າວ !"
+            if (titleText.isNotEmpty()) {
+                val titleView = TextView(this@MainActivity).apply {
+                    text = titleText
+                    setTextColor(Color.WHITE)
+                    textSize = 20f
+                    setTypeface(null, Typeface.BOLD)
+                    gravity = Gravity.CENTER
+                }
+                contentBox.addView(titleView)
             }
-            contentBox.addView(titleView)
 
-            val descText = "ທ່ານຕ້ອງການ ຜູ້ຊ່ວຍ ອັດສະລິຍະ"
+            val descText = "ທ່ານຕ້ອງການ ຜູ້ຊ່ວຍ ອັດສະລິຍະ ບໍ, ເຂົ້າແອບ ນີ້ເລີຍ"
             if (descText.isNotEmpty()) {
                 val descView = TextView(this@MainActivity).apply {
                     text = descText
@@ -132,7 +135,7 @@ class MainActivity : AppCompatActivity() {
 
             // Action Button configured by user (In-App WebView vs External Browser)
             val actionBtn = Button(this@MainActivity).apply {
-                text = "ເຂົ້າລະບົບ"
+                text = "ເຂົ້າລະບົບ ↗"
                 setTextColor(Color.WHITE)
                 textSize = 14f
                 isAllCaps = false
@@ -175,8 +178,8 @@ class MainActivity : AppCompatActivity() {
         webSettings.allowFileAccess = true
         webSettings.allowContentAccess = true
         webSettings.javaScriptCanOpenWindowsAutomatically = true
-        webSettings.setSupportZoom(true)
-        webSettings.builtInZoomControls = true
+        webSettings.setSupportZoom(false)
+        webSettings.builtInZoomControls = false
         webSettings.displayZoomControls = false
         webSettings.loadWithOverviewMode = true
         webSettings.useWideViewPort = true
@@ -221,7 +224,7 @@ class MainActivity : AppCompatActivity() {
                         <body style="font-family:sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;margin:0;background:#0f172a;color:#fff;text-align:center;padding:24px;">
                             <h2 style="margin-bottom:8px;">ບໍ່ສາມາດເຊື່ອມຕໍ່ອິນເຕີເນັດໄດ້</h2>
                             <p style="color:#94a3b8;font-size:14px;">ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ເນັດຂອງທ່ານ ແລ້ວລອງໃໝ່ອີກຄັ້ງ</p>
-                            <button onclick="window.location.href='$homeUrl'" style="margin-top:16px;padding:12px 24px;border:none;border-radius:12px;background:#10b981;color:#fff;font-size:15px;font-weight:bold;">ລອງໂຫຼດໃໝ່</button>
+                            <button onclick="window.location.href='$homeUrl'" style="margin-top:16px;padding:12px 24px;border:none;border-radius:12px;background:#709bf0;color:#fff;font-size:15px;font-weight:bold;">ລອງໂຫຼດໃໝ່</button>
                         </body>
                         </html>
                     """.trimIndent()
